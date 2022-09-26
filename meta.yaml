@@ -1,0 +1,27 @@
+{% set name = "conda_version_pkg" %}
+{% set version = "custom_conda" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  git_url: ../../..
+
+build:
+  number: test1
+
+requirements:
+  host:
+    - setuptools
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - "{{ name|lower }}"
+
+about:
+  home: https://rapids.ai/
+  summary: test only library
