@@ -6,10 +6,11 @@ package:
   version: "{{ version }}"
 
 source:
-  git_url: ../../..
+  git_url: https://github.com/MatthiasKohl/test_conda_version.git
 
 build:
-  number: test1
+  number: 22
+  string: test_22
 
 requirements:
   host:
